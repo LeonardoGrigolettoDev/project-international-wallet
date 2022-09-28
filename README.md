@@ -50,7 +50,7 @@ Neste projeto, verificamos se você é capaz de:
   <summary><strong>🗓 Data de Entrega</strong></summary><br />
   
   * Este projeto é individual;
-  * São `X` dias de projeto;
+  * São `05` dias de projeto;
   * Data para entrega final do projeto: `13/10/2022 14:00`.
 
 </details>
@@ -241,7 +241,7 @@ Neste projeto, verificamos se você é capaz de:
 
   ```javascript
   import { createStore, applyMiddleware } from 'redux';
-  import { composeWithDevTools } from 'redux-devtools-extension';
+  import { composeWithDevTools } from '@redux-devtools/extension';
   import thunk from 'redux-thunk';
   import reducer from '../reducers';
 
