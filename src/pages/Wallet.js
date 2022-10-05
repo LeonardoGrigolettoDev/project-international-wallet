@@ -22,6 +22,8 @@ const mapDispatchToProps = (dispatch) => ({
 });
 const mapStateToProps = (state) => ({
   currencies: state.wallet.currencies,
+  api: state.wallet.api,
+  expenses: state.wallet.expenses,
 });
 
 Wallet.propTypes = {
