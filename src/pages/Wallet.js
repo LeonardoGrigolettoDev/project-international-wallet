@@ -8,8 +8,7 @@ import { fetchAPI } from '../redux/actions';
 
 class Wallet extends React.Component {
   render() {
-    const { currencies, expenses } = this.props;
-    console.log(expenses);
+    const { currencies } = this.props;
     return (
       <div>
         <Header />
@@ -31,7 +30,6 @@ const mapStateToProps = (state) => ({
 
 Wallet.propTypes = {
   currencies: PropTypes.string.isRequired,
-  expenses: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wallet);

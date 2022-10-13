@@ -5,6 +5,7 @@ export const addExpenseAction = (payload) => ({ type: 'addExpense', payload });
 export const expensesAction = (payload) => ({ type: 'expenses', payload });
 const toCurrencies = (payload) => ({ type: 'toCurrencies', payload });
 export const totalValue = (payload) => ({ type: 'totalValue', payload });
+export const deleteExpenseAction = (payload) => ({ type: 'deleteExpense', payload });
 
 export function fetchAPI() {
   return async (dispatch) => {

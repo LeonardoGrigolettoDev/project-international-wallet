@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 
 class Header extends Component {
   render() {
-    const { email, totalValue } = this.props;
+    const { email } = this.props;
+    let { totalValue } = this.props;
+    if (totalValue === 0) {
+      totalValue += '.00';
+    }
     return (
       <header>
         <h1>TrybeWallet</h1>
@@ -28,11 +32,11 @@ const mapStateToProps = (state) => ({
 
 Header.propTypes = {
   email: PropTypes.string.isRequired,
-  totalValue: PropTypes.string,
+  totalValue: PropTypes.number,
 };
 
 Header.defaultProps = {
-  totalValue: '',
+  totalValue: 0,
 };
 
 export default connect(mapStateToProps)(Header);

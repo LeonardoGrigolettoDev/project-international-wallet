@@ -29,12 +29,14 @@ class WalletForm extends Component {
     const { expenses, toTotalValue, totalValueProps } = this.props;
     expenses.map((element) => {
       const value = parseInt(element.value, 10);
-      console.log(value);
       const { currency } = element;
       const { exchangeRates } = element;
       const currentCoin = exchangeRates[currency];
       const currentValueCoin = currentCoin.ask * value;
-      const newTotalValue = (totalValueProps + currentValueCoin);
+      let newTotalValue = (totalValueProps + currentValueCoin);
+      if (newTotalValue === 0) {
+        newTotalValue = '0.00';
+      }
       toTotalValue(Math.round((newTotalValue + Number.EPSILON) * 100) / 100);
       return '';
     });
