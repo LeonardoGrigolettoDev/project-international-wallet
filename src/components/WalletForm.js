@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { expensesAction, totalValue, totalValueAndExpenses } from '../redux/actions';
+import { expensesAction, totalValue } from '../redux/actions';
 
 class WalletForm extends Component {
   constructor(props) {
@@ -149,7 +149,7 @@ WalletForm.propTypes = {
 const mapDispatchToProps = (dispatch) => ({
   toExpenses: (value) => dispatch(expensesAction(value)),
   toTotalValue: (value) => dispatch(totalValue(value)),
-  totalValueAndExpenses: () => dispatch(totalValueAndExpenses()),
+  // totalValueAndExpenses: () => dispatch(totalValueAndExpenses()),
 });
 const mapStateToProps = (state) => ({
   currencies: state.wallet.currencies,
